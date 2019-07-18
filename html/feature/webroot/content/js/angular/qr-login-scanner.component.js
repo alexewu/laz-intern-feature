@@ -1,9 +1,9 @@
 (function() {
 
-    var app = angular.module("kids");
+    var app = angular.module("feature");
 
     app.component("qrLoginScanner", {
-        templateUrl: '/js/angular/qr-login-scanner/qr-login-scanner.html',
+        templateUrl: '/qr-login-scanner.html',
         controller: 'qrLoginScannerController'
     });
 

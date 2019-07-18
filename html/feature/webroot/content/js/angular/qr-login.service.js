@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module("kids");
+    var app = angular.module("feature");
 
     qrService.$inject = ['$http'];
     app.service("qrLoginService", qrService);
