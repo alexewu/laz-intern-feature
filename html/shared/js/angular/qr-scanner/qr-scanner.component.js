@@ -3,7 +3,7 @@
     var app = angular.module("shared");
 
     app.component("qrScanner", {
-        templateUrl: '/shared/js/angular/qr-scanner/qr-scanner.template.html',
+        templateUrl: 'shared/js/angular/qr-scanner/qr-scanner.html',
         controller: 'qrScannerController'
     });
 

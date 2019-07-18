@@ -3,7 +3,7 @@
     var app = angular.module("feature");
 
     app.component("qrLoginScanner", {
-        templateUrl: '/qr-login-scanner.html',
+        templateUrl: 'feature\webroot\content\js\angular\qr-login-scanner.html',
         controller: 'qrLoginScannerController'
     });
 
