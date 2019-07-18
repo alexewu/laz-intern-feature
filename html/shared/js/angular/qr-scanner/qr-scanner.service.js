@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('shared')
+    angular.module('feature')
         .service('qrScanner' , [
             function qrScanner() {
                 var service = this;

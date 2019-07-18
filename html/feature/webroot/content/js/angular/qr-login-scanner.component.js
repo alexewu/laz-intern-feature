@@ -8,7 +8,7 @@
     });
 
     app.controller('qrLoginScannerController', qrLoginScannerController);
-    qrLoginScannerController.$inject = ['qrLoginService', 'windowService', 'qrScanner'];
+    qrLoginScannerController.$inject = ['qrLoginService', 'qrScanner'];
 
     function qrLoginScannerController(qrLoginService, windowService, qrScanner)
     {

@@ -1,16 +1,16 @@
 (function() {
 
-    var app = angular.module("shared");
+    var app = angular.module("feature");
 
     app.component("qrScanner", {
-        templateUrl: 'shared/js/angular/qr-scanner/qr-scanner.html',
+        templateUrl: 'shared/js/angular/qr-scanner/qr-scanner.template.html',
         controller: 'qrScannerController'
     });
 
     app.controller('qrScannerController', qrScannerController);
-    qrScannerController.$inject = ['windowService', 'qrScanner'];
+    qrScannerController.$inject = ['qrScanner'];
 
-    function qrScannerController(windowService, qrScanner)
+    function qrScannerController(qrScanner)
     {
         var ctrl = this;
         ctrl.video = document.createElement("video");
