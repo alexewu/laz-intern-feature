@@ -33,10 +33,10 @@
         ctrl.video.srcObject = stream;
         ctrl.video.setAttribute("playsinline", true);
         ctrl.video.play();
-        window.requestAnimationFrame(ctrl.tick);
+        window.requestAnimationFrame(tick);
         
 
-        ctrl.tick = function ()
+        function tick()
         {
             ctrl.loadingMessage.innerText = "? Loading video...";
             if (ctrl.video.readyState === ctrl.video.HAVE_ENOUGH_DATA)
