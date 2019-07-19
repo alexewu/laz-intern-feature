@@ -1,6 +1,9 @@
 <?php
 namespace objects\library\Router;
 
+require_once 'RequestInterface.php';
+require_once 'Request.php';
+
 class Router
 {
     private $request;
