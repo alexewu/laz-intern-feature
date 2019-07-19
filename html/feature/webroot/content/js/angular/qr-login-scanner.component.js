@@ -10,18 +10,18 @@
     app.controller('qrLoginScannerController', qrLoginScannerController);
     qrLoginScannerController.$inject = ['qrLoginService', 'qrScanner'];
 
-    function qrLoginScannerController(qrLoginService, windowService, qrScanner)
+    function qrLoginScannerController(qrLoginService, qrScanner)
     {
         var ctrl = this;
         qrScanner.subscribe(doQrLogin);
         ctrl.redirectToLoginWebcam = function ()
         {
-            windowService.redirect('/main/Login/action/openWebcam');
+            //windowService.redirect('/main/Login/action/openWebcam');
         };
 
         ctrl.redirectToTeacherUsernameForm = function ()
         {
-            windowService.redirect('/main/Login');
+            //windowService.redirect('/main/Login');
         };
 
         ctrl.$onDestroy = function ()
@@ -30,7 +30,7 @@
         };
 
         function redirectToStudentPortal() {
-            windowService.redirect('/main/StudentPortal');
+            //windowService.redirect('/main/StudentPortal');
         }
 
         function setInvalidLoginError() {
