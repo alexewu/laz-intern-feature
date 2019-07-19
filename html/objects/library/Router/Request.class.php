@@ -1,7 +1,5 @@
 <?php
-include_once 'RequestInterface.php';
-
-use objects\library\Router\RequestInterface;
+namespace objects\library\Router;
 
 class Request implements RequestInterface
 {
