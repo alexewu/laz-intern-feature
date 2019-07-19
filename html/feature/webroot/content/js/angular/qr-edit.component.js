@@ -12,9 +12,9 @@
     });
 
     app.controller('qrEditController', qrEditController);
-    qrEditController.$inject = ["qrLoginService", "downloadService", "$injector"];
+    qrEditController.$inject = ["qrLoginService"];
 
-    function qrEditController(qrLoginService, downloadService, $injector) {
+    function qrEditController(qrLoginService) {
         var ctrl = this;
         var rosterData = null;
 
