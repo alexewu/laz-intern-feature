@@ -2,6 +2,7 @@
 use objects\library\Router\Router;
 use objects\library\Router\Request;
 echo "requiring...";
+echo "CRLF problem?";
 require_once 'html/objects/library/Router/Request.class.php';
 echo "helloooooooooooo?";
 $request = new Request();
