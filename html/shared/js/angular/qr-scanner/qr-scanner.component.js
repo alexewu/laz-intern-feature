@@ -56,7 +56,7 @@
                     (code.data !== "") ? qrScanner.setString (code.data): qrScanner.setIsScanning(false);
                 }
             }
-            requestAnimationFrame(ctrl.tick);
+            window.requestAnimationFrame(tick);
         };
     }
 })();
