@@ -10,7 +10,7 @@ use LAZ\objects\library\RKTeacherHelpers;
 use LAZ\objects\library\KidsModuleAccessCheck;
 use LAZ\vocabulary\services\PdfService;
 
-class QrLoginApiController implements Resource
+class QrLoginApiController
 {
     const PDF_DOWNLOAD_FILENAME = "student-login-qr.pdf";
 

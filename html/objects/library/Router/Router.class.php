@@ -39,16 +39,14 @@ class Router
         header("{$this->request->serverProtocol} 405 Method Not Allowed");
     }
 
-    private function defaultRequestHandler()
-    {
+    private function defaultRequestHandler() {
         header("{$this->request->serverProtocol} 404 Not Found");
     }
 
     /**
      * Resolves a route
      */
-    function resolve()
-    {
+    function resolve() {
         $methodDictionary = $this->{strtolower($this->request->requestMethod)};
         $formattedRoute = $this->formatRoute($this->request->requestUri);
         $method = $methodDictionary[$formattedRoute];
@@ -59,6 +57,7 @@ class Router
         }
         echo call_user_func_array($method, array($this->request));
     }
+
     function __destruct()
     {
         $this->resolve();
