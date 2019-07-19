@@ -1,6 +1,8 @@
 <?php
 namespace objects\library\Router;
 
+require_once 'RequestInterface.php';
+
 class Request implements RequestInterface
 {
     private $requestMethod;
