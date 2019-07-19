@@ -19,23 +19,16 @@
         var rosterData = null;
 
         ctrl.$onInit = function() {
-            if($injector.has('rosterData')) {
-                rosterData = $injector.get('rosterData');
-                ctrl.qrCode = rosterData.qrPassword;
-                ctrl.studentId = rosterData.student.student_id;
-                ctrl.hasQrPassword = (ctrl.qrCode !== "");
-                if(ctrl.hasQrPassword) {
-                    displayQrCode();
-                }
-            }
-            else {
-                qrLoginService.getQrPasscodeFromStudentId(ctrl.studentId)
-                    .then(function (response) {
-                        ctrl.qrCode = response['data'];
-                        ctrl.hasQrPassword = true;
-                        displayQrCode();
-                    });
-            }
+            // qrLoginService.getQrPasscodeFromStudentId(ctrl.studentId)
+            //     .then(function (response) {
+            //         ctrl.qrCode = response['data'];
+            //         ctrl.hasQrPassword = true;
+            //         displayQrCode();
+            //     });
+
+            ctrl.qrCode = "some random string";
+            ctrl.hasQrPassword = true;
+            displayQrCode();
         };
 
         function displayQrCode() {
