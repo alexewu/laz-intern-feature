@@ -1,6 +1,6 @@
 <?php
-use objects\library\Router\Router;
-use objects\library\Router\Request;
+use html\objects\library\Router\Router;
+use html\objects\library\Router\Request;
 echo "helloooooooooooo";
 $router = new Router(new Request());
 echo "hellooo";

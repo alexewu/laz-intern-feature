@@ -1,5 +1,5 @@
 <?php
-namespace objects\library\Router;
+namespace html\objects\library\Router;
 
 class Router
 {
