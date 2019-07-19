@@ -8,7 +8,6 @@
 ######################
 *.log
 *.sql
-*.sqlite
 
 # OS generated files #
 ######################
@@ -17,5 +16,3 @@
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
