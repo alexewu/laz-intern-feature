@@ -5,7 +5,8 @@ use objects\library\Router\Request;
 $router = new Router(new Request());
 
 $router->get('/', function() {
-    include 'html/index.html';
+    //include 'html/index.html';
+    echo "hello world";
 });
 
 $router->get('/featureDescription', function() {
