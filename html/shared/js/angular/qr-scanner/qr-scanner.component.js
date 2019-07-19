@@ -33,7 +33,7 @@
         ctrl.video.srcObject = stream;
         ctrl.video.setAttribute("playsinline", true);
         ctrl.video.play();
-        requestAnimationFrame(ctrl.tick);
+        window.requestAnimationFrame(ctrl.tick);
         
 
         ctrl.tick = function ()
