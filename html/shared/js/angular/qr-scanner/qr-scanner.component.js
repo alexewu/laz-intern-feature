@@ -18,12 +18,18 @@
         ctrl.canvas = ctrl.canvasElement.getContext("2d");
         ctrl.loadingMessage = document.getElementById("loadingMessage");
 
-        navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
-            ctrl.video.srcObject = stream;
-            ctrl.video.setAttribute("playsinline", true);
-            ctrl.video.play();
-            requestAnimationFrame(ctrl.tick);
-        });
+        if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
+                ctrl.video.srcObject = stream;
+                ctrl.video.setAttribute("playsinline", true);
+                ctrl.video.play();
+                requestAnimationFrame(ctrl.tick);
+            });
+        }
+        else {
+            console.log("this getUserMedia function is not working");
+        }
+        
 
         ctrl.tick = function ()
         {
