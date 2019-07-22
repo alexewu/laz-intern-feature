@@ -1,6 +1,6 @@
 <?php
-require_once 'objects/library/Router/Request.php';
-require_once 'objects/library/Router/Router.php';
+require_once './objects/library/Router/Request.php';
+require_once './objects/library/Router/Router.php';
 
 $request = new Request();
 $router = new Router($request);
