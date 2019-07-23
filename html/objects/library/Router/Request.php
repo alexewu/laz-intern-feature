@@ -9,6 +9,7 @@ class Request implements RequestInterface
 
     function __construct() {
         $this->bootstrapSelf();
+        echo "in request constructor";
     }
 
     private function bootstrapSelf() {
