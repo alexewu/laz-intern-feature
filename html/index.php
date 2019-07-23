@@ -11,8 +11,7 @@ $router = new Router($request);
 var_dump($request);
 
 $router->get('/', function() {
-    //include 'html/index.html';
-    echo "hello world";
+    include 'index.html';
 });
 
 $router->get('/featureDescription', function() {
