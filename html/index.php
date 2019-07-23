@@ -11,11 +11,11 @@ $router = new Router($request);
 var_dump($router);
 
 
-//$router->get('/', function() {
-//    //include 'html/index.html';
-//    echo "hello world";
-//});
-//
-//$router->get('/featureDescription', function() {
-//    return "Qr Student Login :)";
-//});
+$router->get('/', function() {
+    //include 'html/index.html';
+    echo "hello world";
+});
+
+$router->get('/featureDescription', function() {
+    return "Qr Student Login :)";
+});
