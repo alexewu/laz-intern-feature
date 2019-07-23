@@ -5,7 +5,7 @@ require_once 'RequestInterface.php';
 
 class Request implements RequestInterface
 {
-    private $requestMethod;
+    public $requestMethod;
 
     function __construct() {
         $this->bootstrapSelf();
