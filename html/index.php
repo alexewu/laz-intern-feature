@@ -6,10 +6,9 @@ use objects\library\Router\Request;
 use objects\library\Router\Router;
 
 $request = new Request();
-echo "jfkasd";
 $router = new Router($request);
-var_dump($router);
 
+var_dump($request);
 
 $router->get('/', function() {
     //include 'html/index.html';
