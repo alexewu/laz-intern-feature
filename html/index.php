@@ -8,7 +8,7 @@ use objects\library\Router\Router;
 $request = new Request();
 echo "jfkasd";
 $router = new Router($request);
-echo "jhaskldf";
+var_dump($router);
 
 
 //$router->get('/', function() {
