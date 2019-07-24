@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
 namespace feature\src\api;
-require_once '../services/QrLoginService.php';
-require_once '../services/QrCodeService.php';
 
 use feature\src\services\QrLoginService;
 
@@ -100,9 +98,5 @@ class QrLoginApiController
 //    private function isQrPdfRequestValid(array $studentQrInfo): bool {
 //        return $this->kidsModuleCheck->isTeacher() && $studentQrInfo['qr_password'];
 //    }
-
-    public function test(): void {
-        echo "This is a test function";
-    }
 
 }
