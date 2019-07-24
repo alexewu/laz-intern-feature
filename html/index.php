@@ -5,12 +5,14 @@ require_once 'feature/src/api/QrLoginApiController.class.php';
 
 use objects\library\Router\Request;
 use objects\library\Router\Router;
+use feature\src\api\QrLoginApiController;
 
 $request = new Request();
 $router = new Router($request);
+$qrController = new QrLoginApiController();
 
 $router->get('/', function() {
     include 'index.html';
 });
 
-$router->get('/test', );
+$router->get('/test', $qrController->test());
