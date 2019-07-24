@@ -3,7 +3,6 @@ declare(strict_types=1);
 namespace feature\src\api;
 
 use LAZ\objects\kidsaz\services\qrCode\QrCodeService;
-use LAZ\objects\library\Router\Resource;
 use LAZ\objects\kidsaz\services\qrLogin\QrLoginService;
 use Psr\Http\Message\ServerRequestInterface;
 use LAZ\objects\library\RKTeacherHelpers;
@@ -101,6 +100,10 @@ class QrLoginApiController
 
     private function isQrPdfRequestValid(array $studentQrInfo): bool {
         return $this->kidsModuleCheck->isTeacher() && $studentQrInfo['qr_password'];
+    }
+
+    public function test(): string {
+        echo "This is a test function";
     }
 
 }

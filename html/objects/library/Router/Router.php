@@ -14,7 +14,6 @@ class Router
 
     function __construct(RequestInterface $request) {
         $this->request = $request;
-        echo "in router constructor";
     }
 
     function __call($name, $args) {
