@@ -17,4 +17,4 @@ $router->get('/', function() {
 
 $router->get('/test', $qrController->test());
 
-$router->get('/api/regenerate', $qrController->regenerate());
+$router->post('/api/regenerate', $qrController->regenerate());
