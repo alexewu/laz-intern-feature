@@ -3,10 +3,6 @@ declare (strict_types=1);
 
 namespace LAZ\objects\kidsaz\services\qrCode;
 
-use Endroid\QrCode\ErrorCorrectionLevel;
-use Endroid\QrCode\QrCode;
-use LAZ\objects\library\LazHtmlToPdf;
-
 class QrCodeService
 {
     private $logoPath;

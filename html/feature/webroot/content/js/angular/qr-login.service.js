@@ -6,8 +6,8 @@
     app.service("qrLoginService", qrService);
 
     function qrService($http) {
-        function regenerateNewQrCode(studentId) {
-            return $http.post('/api/qrLogin/regenerate/' + studentId);
+        function regenerateNewQrCode() {
+            return $http.post('/api/regenerate');
         }
 
         function generateQrForClassroom() {

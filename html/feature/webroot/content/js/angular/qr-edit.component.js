@@ -40,7 +40,7 @@
         }
 
         ctrl.regenerate = function () {
-            qrLoginService.regenerateNewQrCode(ctrl.studentId)
+            qrLoginService.regenerateNewQrCode()
                 .then(function (response) {
                     ctrl.qrCode = response["data"];
                     ctrl.qrImage.makeCode(response["data"]);
@@ -52,7 +52,7 @@
         };
 
         ctrl.onSubmit = function() {
-            downloadService.download("/api/qrLogin/qrStudentLoginPdf?studentId=" + ctrl.studentId);
+            //downloadService.download("/api/qrLogin/qrStudentLoginPdf?studentId=" + ctrl.studentId);
         };
     }
 })();

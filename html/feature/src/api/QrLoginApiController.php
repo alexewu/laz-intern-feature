@@ -1,23 +1,26 @@
 <?php
 declare(strict_types=1);
 namespace feature\src\api;
+require_once '../services/QrLoginService.php';
+require_once '../services/QrCodeService.php';
 
+use feature\src\services\QrLoginService;
 
 class QrLoginApiController
 {
     const PDF_DOWNLOAD_FILENAME = "student-login-qr.pdf";
 
-    private $resource;
+    //private $resource;
     private $qrService;
     private $shardId;
-    private $qrCodeService;
+    //private $qrCodeService;
     private $rkTeacherHelpers;
-    private $kidsModuleCheck;
-    private $pdfService;
+    //private $kidsModuleCheck;
+    //private $pdfService;
 
     public function __construct() {
-//        $this->shardId = $_SESSION['teacherAccountInfo']['shardConfigurationId'];
-//        $this->qrService = new QrLoginService((int)$this->shardId);
+        $this->shardId = 1; //mock data
+        $this->qrService = new QrLoginService((int)$this->shardId);
 //        $this->qrCodeService = new QrCodeService();
 //        $this->rkTeacherHelpers = new RKTeacherHelpers();
 //        $this->kidsModuleCheck = new KidsModuleAccessCheck();
@@ -27,16 +30,18 @@ class QrLoginApiController
 //    public function setResource($resource): void {
 //        $this->resource = $resource;
 //    }
-//
-//    public function regenerate(ServerRequestInterface $request): ?string {
-//        $studentId = (int)$request->getAttribute('studentId');
-//        return $this->kidsModuleCheck->isTeacher()? $this->qrService->regenerate($studentId) : "Error: you are not a valid teacher for this student";
-//    }
-//
-//    public function getQrCode(ServerRequestInterface $request): ?string {
-//        return $this->qrService->getQrCodeFromStudentId((int)$request->getAttribute('studentId'));
-//    }
-//
+
+    public function regenerate(): ?string {
+        $studentId = 1234567; //mock data
+        $isRoleTeacher = true; //mock data
+        return $isRoleTeacher? $this->qrService->regenerate($studentId) : "Error: you are not a valid teacher for this student";
+    }
+
+    public function getQrCode(): ?string {
+        $studentId = 1234567; //mock data
+        return $this->qrService->getQrCodeFromStudentId($studentId);
+    }
+
 //    public function getIndividualStudentQrPdf(ServerRequestInterface $request): void {
 //        $studentId = (int)$request->getQueryParams()['studentId'];
 //        if($this->kidsModuleCheck->isTeacher()) {
@@ -69,19 +74,19 @@ class QrLoginApiController
 //        $html = $this->qrService->getPdfHtml($qrCodeSources);
 //        $this->pdfService->generatePdf($html, QrLoginApiController::PDF_DOWNLOAD_FILENAME);
 //    }
-//
-//    public function getStudentInfoFromMemberId(ServerRequestInterface $request): ?array {
-//        return $this->rkTeacherHelpers->getStudentIdsForMember((int)$request->getAttribute('memberId'));
-//    }
-//
-//    public function getQrInfo(): array {
-//        return $this->qrService->getQrInfo((int)$_SESSION['member']);
-//    }
-//
-//    public function generateClassroomQrLogin(): void {
-//        $this->qrService->generateClassroomQrLogin((int)$_SESSION['member']);
-//    }
-//
+
+    public function getStudentInfoFromMemberId(ServerRequestInterface $request): ?array {
+        return $this->rkTeacherHelpers->getStudentIdsForMember((int)$request->getAttribute('memberId'));
+    }
+
+    public function getQrInfo(): array {
+        return $this->qrService->getQrInfo((int)$_SESSION['member']);
+    }
+
+    public function generateClassroomQrLogin(): void {
+        $this->qrService->generateClassroomQrLogin((int)$_SESSION['member']);
+    }
+
 //    private function getStudentNameFromStudentId(int $studentId): ?string {
 //        $basicStudentInfo = $this->rkTeacherHelpers->getBasicStudentInfo($studentId, $this->shardId);
 //        return $basicStudentInfo['student_first_name'] . " " . $basicStudentInfo['student_last_name'];
