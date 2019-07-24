@@ -1,7 +1,7 @@
 <?php
 require_once 'objects/library/Router/Request.php';
 require_once 'objects/library/Router/Router.php';
-require_once 'feature/src/api/QrLoginApiController.class.php';
+require_once 'feature/src/api/QrLoginApiController.php';
 
 use objects\library\Router\Request;
 use objects\library\Router\Router;
