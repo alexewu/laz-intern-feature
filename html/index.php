@@ -15,6 +15,12 @@ $router->get('/', function() {
     include 'index.html';
 });
 
-$router->post('/api/regenerate', $qrController->regenerate());
+$router->post('/api/regenerate', function($request) {
+    var_dump($request);
+    return "dang dang dang";
+});
 
-$router->get('/api/studentPasscode', $qrController->getQrCode());
+$router->get('/api/studentPasscode', function($request) {
+    var_dump($request);
+    return "bang bang bang";
+});
