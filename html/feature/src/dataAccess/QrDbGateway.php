@@ -30,7 +30,8 @@ class QrDbGateway {
 //        $result = $this->qrDm->fetch();
 //
 //        return $result["qr_password"];
-        return $this->student['qr_password'];
+//        return $this->student['qr_password'];
+        return "pls workssssss";
     }
 
     public function isStudentInQrTable(int $studentId): bool {
