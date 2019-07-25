@@ -15,6 +15,4 @@ $router->get('/', function() {
     include 'index.html';
 });
 
-$router->get('/test', $qrController->test());
-
 $router->post('/api/regenerate', $qrController->regenerate());
