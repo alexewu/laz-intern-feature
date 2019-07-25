@@ -16,8 +16,8 @@ $router->get('/', function() {
 });
 
 $router->post('/api/regenerate', function($request) {
-    //var_dump($request);
-    return "dang dang dang";
+    $qrController = new QrLoginApiController();
+    return $qrController->regenerate();
 });
 
 $router->get('/api/studentPasscode', function($request) {
