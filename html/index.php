@@ -16,11 +16,11 @@ $router->get('/', function() {
 });
 
 $router->post('/api/regenerate', function($request) {
-    var_dump($request);
+    //var_dump($request);
     return "dang dang dang";
 });
 
 $router->get('/api/studentPasscode', function($request) {
-    var_dump($request);
+    //var_dump($request);
     return "bang bang bang";
 });
