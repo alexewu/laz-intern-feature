@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace feature\src\services;
-require_once '../dataAccess/QrDbGateway.php';
+require_once __DIR__ .  '/../dataAccess/QrDbGateway.php';
 
 use feature\src\dataAccess\QrDbGateway;
 
