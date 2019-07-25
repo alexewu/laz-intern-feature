@@ -20,7 +20,4 @@ $router->post('/api/regenerate', function($request) {
     return "dang dang dang";
 });
 
-$router->get('/api/studentPasscode', function($request) {
-    //var_dump($request);
-    return "bang bang bang";
-});
+$router->get('/api/studentPasscode', $qrController->getQrCode());

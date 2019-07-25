@@ -40,7 +40,7 @@ class QrLoginApiController
     public function getQrCode() {
         $studentId = 1234567; //mock data
 //        return $this->qrService->getQrCodeFromStudentId($studentId);
-        echo "blah blah blah";
+        return "blah blah blah";
     }
 
 //    public function getIndividualStudentQrPdf(ServerRequestInterface $request): void {
