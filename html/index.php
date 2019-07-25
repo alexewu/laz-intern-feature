@@ -9,7 +9,7 @@ use feature\src\api\QrLoginApiController;
 
 $request = new Request();
 $router = new Router($request);
-$qrController = new QrLoginApiController();
+
 
 $router->get('/', function() {
     include 'index.html';
@@ -20,4 +20,7 @@ $router->post('/api/regenerate', function($request) {
     return "dang dang dang";
 });
 
-$router->get('/api/studentPasscode', $qrController->getQrCode());
+$router->get('/api/studentPasscode', function($request) {
+    $qrController = new QrLoginApiController();
+    return $qrController->getQrCode();
+});
