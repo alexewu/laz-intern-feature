@@ -16,3 +16,5 @@ $router->get('/', function() {
 });
 
 $router->post('/api/regenerate', $qrController->regenerate());
+
+$router->get('/api/studentPasscode', $qrController->getQrCode());

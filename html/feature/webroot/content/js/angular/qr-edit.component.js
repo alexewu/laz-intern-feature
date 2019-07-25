@@ -19,14 +19,12 @@
         var rosterData = null;
 
         ctrl.$onInit = function() {
-            // qrLoginService.getQrPasscodeFromStudentId(ctrl.studentId)
-            //     .then(function (response) {
-            //         ctrl.qrCode = response['data'];
-            //         ctrl.hasQrPassword = true;
-            //         displayQrCode();
-            //     });
-
-            ctrl.qrCode = "some random string";
+             qrLoginService.getQrPasscodeFromStudentId(ctrl.studentId)
+                 .then(function (response) {
+                     ctrl.qrCode = response['data'];
+                     ctrl.hasQrPassword = true;
+                     displayQrCode();
+                 });
             ctrl.hasQrPassword = true;
             displayQrCode();
         };

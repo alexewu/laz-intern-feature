@@ -30,7 +30,7 @@ class QrDbGateway {
 //        $result = $this->qrDm->fetch();
 //
 //        return $result["qr_password"];
-        return "This is a random string";
+        return $this->student['qr_password'];
     }
 
     public function isStudentInQrTable(int $studentId): bool {
@@ -51,7 +51,6 @@ class QrDbGateway {
     }
 
     public function updateQRPassword(int $studentId, string $newPassword): void {
-        echo "reached updateQrPassword";
 //        $sql = "UPDATE qr_student_login
 //                SET qr_password = '$newPassword'
 //                WHERE student_id = $studentId";

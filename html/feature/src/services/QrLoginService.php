@@ -35,7 +35,6 @@ class QrLoginService {
         else {
             $this->dbGateway->createFirstQRPassword($studentId, $newPassword);
         }
-        echo $newPassword;
         return $newPassword;
     }
 

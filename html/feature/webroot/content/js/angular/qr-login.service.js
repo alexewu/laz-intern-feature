@@ -36,8 +36,8 @@
             return $http.get('/api/qrLogin/qrInfo');
         }
 
-        function getQrPasscodeFromStudentId(studentId) {
-            return $http.get('/api/qrLogin/' + studentId);
+        function getQrPasscodeFromStudentId() {
+            return $http.get('/api/studentPasscode/');
         }
 
         return {
