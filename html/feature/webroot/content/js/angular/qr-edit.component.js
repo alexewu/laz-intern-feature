@@ -19,8 +19,9 @@
         var rosterData = null;
 
         ctrl.$onInit = function() {
-             qrLoginService.getQrPasscodeFromStudentId(ctrl.studentId)
+             qrLoginService.getQrPasscodeFromStudentId()
                  .then(function (response) {
+                     console.log(response);
                      ctrl.qrCode = response['data'];
                      ctrl.hasQrPassword = true;
                      displayQrCode();
