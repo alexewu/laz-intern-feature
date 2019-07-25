@@ -51,6 +51,7 @@ class QrDbGateway {
     }
 
     public function updateQRPassword(int $studentId, string $newPassword): void {
+        echo "reached updateQrPassword";
 //        $sql = "UPDATE qr_student_login
 //                SET qr_password = '$newPassword'
 //                WHERE student_id = $studentId";
