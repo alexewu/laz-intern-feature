@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 namespace feature\src\api;
-require_once '/services/QrLoginService.php';
+require_once __DIR__ .  '/../services/QrLoginService.php';
 
 use feature\src\services\QrLoginService;
 
