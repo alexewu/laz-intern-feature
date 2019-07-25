@@ -33,12 +33,12 @@ class QrLoginApiController
     public function regenerate(): ?string {
         $studentId = 1234567; //mock data
         $isRoleTeacher = true; //mock data
-        return $isRoleTeacher? $this->qrService->regenerate($studentId) : "Error: you are not a valid teacher for this student";
+        echo $isRoleTeacher? $this->qrService->regenerate($studentId) : "Error: you are not a valid teacher for this student";
     }
 
     public function getQrCode(): ?string {
         $studentId = 1234567; //mock data
-        return $this->qrService->getQrCodeFromStudentId($studentId);
+        echo $this->qrService->getQrCodeFromStudentId($studentId);
     }
 
 //    public function getIndividualStudentQrPdf(ServerRequestInterface $request): void {
