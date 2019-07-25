@@ -18,22 +18,23 @@
         ctrl.canvas = ctrl.canvasElement.getContext("2d");
         ctrl.loadingMessage = document.getElementById("loadingMessage");
 
-        // if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        //     navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
-        //         ctrl.video.srcObject = stream;
-        //         ctrl.video.setAttribute("playsinline", true);
-        //         ctrl.video.play();
-        //         requestAnimationFrame(ctrl.tick);
-        //     });
-        // }
-        // else {
-        //     console.log("this getUserMedia function is not working");
-        // }
-        var stream = ctrl.canvasElement.captureStream(25);
-        ctrl.video.srcObject = stream;
-        ctrl.video.setAttribute("playsinline", true);
-        ctrl.video.play();
-        window.requestAnimationFrame(tick);
+         if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+             navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
+                 ctrl.video.srcObject = stream;
+                 ctrl.video.setAttribute("playsinline", true);
+                 ctrl.video.play();
+                 requestAnimationFrame(tick);
+             });
+         }
+         else {
+             console.log("this getUserMedia function is not working");
+         }
+
+        //var stream = ctrl.canvasElement.captureStream(25);
+        //ctrl.video.srcObject = stream;
+        //ctrl.video.setAttribute("playsinline", true);
+        //ctrl.video.play();
+        //window.requestAnimationFrame(tick);
         
 
         function tick()

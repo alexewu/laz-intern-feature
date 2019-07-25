@@ -16,7 +16,6 @@
 
     function qrEditController(qrLoginService) {
         var ctrl = this;
-        var rosterData = null;
 
         ctrl.$onInit = function() {
              qrLoginService.getQrPasscodeFromStudentId()
