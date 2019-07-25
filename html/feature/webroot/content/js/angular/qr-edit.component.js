@@ -16,11 +16,11 @@
 
     function qrEditController(qrLoginService) {
         var ctrl = this;
+        var rosterData = null;
 
         ctrl.$onInit = function() {
              qrLoginService.getQrPasscodeFromStudentId()
                  .then(function (response) {
-                     console.log(response);
                      ctrl.qrCode = response['data'];
                      ctrl.hasQrPassword = true;
                      displayQrCode();
