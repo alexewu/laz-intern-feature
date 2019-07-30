@@ -11,3 +11,16 @@
     justify-content: center;
     text-align: center;
 }
+
+.buttons
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.project_overview
+{
+    width: 50%;
+}
