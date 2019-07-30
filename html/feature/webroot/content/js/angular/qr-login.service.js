@@ -28,14 +28,6 @@
             return $http(req);
         }
 
-        //function teacherHasQrUsers() {
-        //    return $http.get('/api/qrLogin/teacherHasQrUsers');
-        //}
-
-        function getQrInfo() {
-            return $http.get('/api/qrLogin/qrInfo');
-        }
-
         function getQrPasscodeFromStudentId() {
             return $http.get('/api/studentPasscode');
         }
@@ -44,8 +36,6 @@
             regenerateNewQrCode: regenerateNewQrCode,
             generateQrForClassroom: generateQrForClassroom,
             login: login,
-            teacherHasQrUsers: teacherHasQrUsers,
-            getQrInfo: getQrInfo,
             getQrPasscodeFromStudentId: getQrPasscodeFromStudentId,
         }
     }

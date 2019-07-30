@@ -26,16 +26,6 @@
                  requestAnimationFrame(tick);
              });
          }
-         else {
-             console.log("this getUserMedia function is not working");
-         }
-
-        //var stream = ctrl.canvasElement.captureStream(25);
-        //ctrl.video.srcObject = stream;
-        //ctrl.video.setAttribute("playsinline", true);
-        //ctrl.video.play();
-        //window.requestAnimationFrame(tick);
-        
 
         function tick()
         {
