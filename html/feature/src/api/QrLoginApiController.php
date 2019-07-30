@@ -9,11 +9,11 @@ class QrLoginApiController
 {
     const PDF_DOWNLOAD_FILENAME = "student-login-qr.pdf";
 
-    //private $resource;
     private $qrService;
     private $shardId;
-    //private $qrCodeService;
     private $rkTeacherHelpers;
+    //private $resource;
+    //private $qrCodeService;
     //private $kidsModuleCheck;
     //private $pdfService;
 
@@ -26,10 +26,6 @@ class QrLoginApiController
 //        $this->pdfService = new PdfService($this->shardId);
     }
 
-//    public function setResource($resource): void {
-//        $this->resource = $resource;
-//    }
-
     public function regenerate() {
         $studentId = 1234567; //mock data
         $isRoleTeacher = true; //mock data
@@ -40,6 +36,22 @@ class QrLoginApiController
         $studentId = 1234567; //mock data
         return $this->qrService->getQrCodeFromStudentId($studentId);
     }
+
+    public function login() {
+        return $this->qrService->login();
+    }
+
+//    public function getStudentInfoFromMemberId(ServerRequestInterface $request): ?array {
+//        return $this->rkTeacherHelpers->getStudentIdsForMember((int)$request->getAttribute('memberId'));
+//    }
+
+//    public function getQrInfo(): array {
+//        return $this->qrService->getQrInfo((int)$_SESSION['member']);
+//    }
+
+//    public function generateClassroomQrLogin(): void {
+//        $this->qrService->generateClassroomQrLogin((int)$_SESSION['member']);
+//    }
 
 //    public function getIndividualStudentQrPdf(ServerRequestInterface $request): void {
 //        $studentId = (int)$request->getQueryParams()['studentId'];
@@ -73,18 +85,10 @@ class QrLoginApiController
 //        $html = $this->qrService->getPdfHtml($qrCodeSources);
 //        $this->pdfService->generatePdf($html, QrLoginApiController::PDF_DOWNLOAD_FILENAME);
 //    }
-
-    public function getStudentInfoFromMemberId(ServerRequestInterface $request): ?array {
-        return $this->rkTeacherHelpers->getStudentIdsForMember((int)$request->getAttribute('memberId'));
-    }
-
-    public function getQrInfo(): array {
-        return $this->qrService->getQrInfo((int)$_SESSION['member']);
-    }
-
-    public function generateClassroomQrLogin(): void {
-        $this->qrService->generateClassroomQrLogin((int)$_SESSION['member']);
-    }
+//
+//    public function setResource($resource): void {
+//        $this->resource = $resource;
+//    }
 
 //    private function getStudentNameFromStudentId(int $studentId): ?string {
 //        $basicStudentInfo = $this->rkTeacherHelpers->getBasicStudentInfo($studentId, $this->shardId);

@@ -38,10 +38,6 @@ class QrLoginService {
         return $newPassword;
     }
 
-//    public function initializeQrPassword($studentId): void {
-//        $this->dbGateway->createFirstQRPassword($studentId, $this->createNewQrPassword($studentId));
-//    }
-//
     public function createNewQrPassword(int $studentId): ?string {
         return $this->shardId . hash('sha256', $studentId . time());
     }
@@ -49,6 +45,14 @@ class QrLoginService {
     public function getStudentIdFromQrPassword(string $qrPassword): ?int {
         return $this->dbGateway->getStudentIdFromQrPassword($qrPassword);
     }
+
+    public function login() {
+        return $this->dbGateway->login();
+    }
+
+//    public function initializeQrPassword($studentId): void {
+//        $this->dbGateway->createFirstQRPassword($studentId, $this->createNewQrPassword($studentId));
+//    }
 //
 //    public function createPdf(string $qrString): void {
 //        $pdf = new LazHtmlToPdf ($this->logger);

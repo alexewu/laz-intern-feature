@@ -28,9 +28,9 @@
             return $http(req);
         }
 
-        function teacherHasQrUsers() {
-            return $http.get('/api/qrLogin/teacherHasQrUsers');
-        }
+        //function teacherHasQrUsers() {
+        //    return $http.get('/api/qrLogin/teacherHasQrUsers');
+        //}
 
         function getQrInfo() {
             return $http.get('/api/qrLogin/qrInfo');

@@ -15,12 +15,17 @@ $router->get('/', function() {
     include 'index.html';
 });
 
-$router->post('/api/regenerate', function($request) {
+$router->post('/api/regenerate', function() {
     $qrController = new QrLoginApiController();
     return $qrController->regenerate();
 });
 
-$router->get('/api/studentPasscode', function($request) {
+$router->get('/api/studentPasscode', function() {
     $qrController = new QrLoginApiController();
     return $qrController->getQrCode();
+});
+
+$router->post('/api/Login', function() {
+    $qrController = new QrLoginApiController();
+    return $qrController->login();
 });

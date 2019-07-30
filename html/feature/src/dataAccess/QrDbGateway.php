@@ -6,18 +6,18 @@ class QrDbGateway {
     const MAX_QR_PASSWORD_LENGTH = 65;
 
     private $shardId;
-    //private $qrDm;
     private $student;
+    private $qrDm;
 
     public function __construct(int $shardId) {
         $this->shardId = $shardId;
-        $this->student = [
+        $this->student = [ //mock student data
             "student_id" => 12345,
-            'qr_password' => 'this is a random string',
+            'qr_password' => '195d628dbdb59083657dhbthgu73892784nhxjud8394857b2',
             'student_first_name' => 'Alexandra',
             'student_last_name' => 'Wu',
             'screen_name' => 'alexewu'
-        ]; //mock student data
+        ];
         //$this->qrDm = new DataManager(DataManager::DB_RK_ACTIVITY, DataManager::LOC_MASTER, $this->shardId);
     }
 
@@ -101,5 +101,9 @@ class QrDbGateway {
 //        $this->qrDm->query($sql);
 //        return $this->qrDm->fetchAll();
         return $this->student;
+    }
+
+    public function login() {
+        return "You have logged in!";
     }
 }
