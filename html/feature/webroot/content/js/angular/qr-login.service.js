@@ -15,17 +15,17 @@
         }
 
         function login(qrPassword) {
-            var req = {
-                method: 'POST',
-                url: '/main/Login/',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                data: {
-                    'qr_password': qrPassword
-                }
-            };
-            return $http(req);
+            //var req = {
+            //    method: 'POST',
+            //    url: '/main/Login/',
+            //    headers: {
+            //        'Content-Type': 'application/x-www-form-urlencoded'
+            //    },
+            //    data: {
+            //        'qr_password': qrPassword
+            //    }
+            //};
+            //return $http(req);
         }
 
         function getQrPasscodeFromStudentId() {

@@ -30,6 +30,7 @@
         };
 
         function redirectToStudentPortal() {
+            ctrl.isSuccessfulLogin = true;
             //windowService.redirect('/main/StudentPortal');
         }
 
@@ -39,7 +40,17 @@
         }
 
         function doQrLogin(qrPasscode) {
-            console.log("you logged in! and this is your qrpasscode: " + qrPasscode);
+            ctrl.isLoggingIn = true;
+            //return qrLoginService.login(qrPasscode)
+            //    .then(redirectToStudentPortal)
+            //    .catch(setInvalidLoginError);
+            qrLoginService.getQrPasscodeFromStudentId()
+                .then(function(response) {
+                    if(response['data'] === qrPasscode) {
+                        redirectToStudentPortal();
+                    }
+                })
+                .catch(setInvalidLoginError);
         }
     }
 })();
