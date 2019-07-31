@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
 .project_overview
@@ -27,7 +28,7 @@
 
 .card
 {
-    width: 40%;
+    width: 1024px;
     background-color: #d9d9d9;
     -webkit-border-radius: 80px;
 }
