@@ -12,6 +12,5 @@
     function navbarController() {
         var ctrl = this;
 
-
     }
 })();

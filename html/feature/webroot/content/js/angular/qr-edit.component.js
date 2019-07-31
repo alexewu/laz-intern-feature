@@ -21,8 +21,9 @@
              qrLoginService.getQrPasscodeFromStudentId()
                  .then(function (response) {
                      ctrl.qrCode = response['data'];
-                     ctrl.hasQrPassword = true;
-                     displayQrCode();
+                     //ctrl.hasQrPassword = true;
+                     //displayQrCode();
+                     console.log(ctrl.qrCode);
                  });
             ctrl.hasQrPassword = true;
         };
