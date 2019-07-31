@@ -12,6 +12,7 @@ $router = new Router($request);
 
 
 $router->get('/', function() {
+    include 'include.html';
     include 'index.html';
 });
 

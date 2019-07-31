@@ -2,44 +2,18 @@
 <html ng-app="feature">
 <head>
     <title> Teacher Side - LAZ </title>
-
-    <link rel="stylesheet" href="shared/css/styles1.css" type="text/css" media="all">
-    <link rel="stylesheet" href="shared/css/styles2.css" type="text/css" media="all">
-    <link rel="stylesheet" href="shared/css/alex-styles.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
-    <script type="text/javascript" src="shared/js/jsQR.js"></script>
-    <script type="text/javascript" src="shared/js/qrcode.js"></script>
-
-
-    <script type="text/javascript" src="shared/js/angular/shared.module.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/feature.module.js"></script>
-
-
-    <script type="text/javascript" src="feature/webroot/content/js/angular/qr-scanner.service.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/angular/qr-scanner.component.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/angular/qr-login.service.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/angular/qr-login-scanner.component.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/angular/qr-edit.component.js"></script>
-    <script type="text/javascript" src="feature/webroot/content/js/angular/navbar.component.js"></script>
-
 </head>
-
 <body class="container">
 
-<div class="content">
+    <div class="content">
 
-    <navbar></navbar>
+        <navbar></navbar>
+        <div class="teacher_side_container">
+            <qr-edit class="qr-edit"></qr-edit>
+            <img src="teachersidebackground.jpg" class="teacher_img_background">
+        </div>
 
-    <div class="teacher_side_container">
-        <qr-edit class="qr-edit"></qr-edit>
-        <img src="teachersidebackground.jpg" class="teacher_img_background">
     </div>
-
-
-</div>
 
 </body>
 

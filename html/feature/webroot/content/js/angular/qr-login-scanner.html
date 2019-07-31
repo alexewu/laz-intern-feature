@@ -1,23 +1,11 @@
 <div style="text-align: center;">
-<!--    <div ng-if="!$ctrl.isLoggingIn" style="display: flex;-->
-<!--                flex-direction: row;-->
-<!--                align-items: baseline;-->
-<!--                width: 300px">-->
-<!--        <h2 class="marginB0">QR Scanner</h2>-->
-<!--        <button class="btn" ng-click="$ctrl.redirectToTeacherUsernameForm()" style="height: 50%;-->
-<!--                                                                                    margin-left: 40px;">-->
-<!--            Go back-->
-<!--        </button>-->
-<!--    </div>-->
     <h2 ng-if="!$ctrl.isLoggingIn"> Scan the QR code from the <a href="/teacher.html">teacher side</a>!</h2>
     <p> (Tip: take a picture of the QR code on your phone and scan) </p>
     <h2 ng-if="$ctrl.isLoggingIn && $ctrl.isSuccessfulLogin"> Success! You've logged in :D </h2>
     <qr-scanner ng-if="!$ctrl.isLoggingIn"></qr-scanner>
-<!--    <div ng-if="$ctrl.isLoggingIn" class="loading_spinner" style="top: 51%;"></div>-->
     <p ng-if="!$ctrl.isLoggingIn"> Place QR Code within frame to scan. </p>
     <img ng-if="$ctrl.isSuccessfulLogin" alt="studentPortal" src="/../studentPortal.jpg">
 </div>
-
 <div ng-if="$ctrl.isInvalidQrPassword" class="alert alert-fail error">
     {{$ctrl.errorMessage}}
 </div>

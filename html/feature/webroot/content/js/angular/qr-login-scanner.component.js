@@ -41,9 +41,6 @@
 
         function doQrLogin(qrPasscode) {
             ctrl.isLoggingIn = true;
-            //return qrLoginService.login(qrPasscode)
-            //    .then(redirectToStudentPortal)
-            //    .catch(setInvalidLoginError);
             qrLoginService.getQrPasscodeFromStudentId()
                 .then(function (response) {
                     console.log(response + " " + qrPasscode);
