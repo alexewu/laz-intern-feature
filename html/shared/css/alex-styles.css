@@ -43,8 +43,8 @@
 {
     float: left;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 1320px;
+    top: 550px;
     z-index: 1000;
 }
 
@@ -54,4 +54,15 @@
     height: 1327px;
     border: 0px;
     margin: 0 auto;
+}
+
+.qr-code
+{
+    height: 100px;
+    margin: 0 auto;
+}
+
+.qr-edit-buttons
+{
+    margin-top: 10px;
 }

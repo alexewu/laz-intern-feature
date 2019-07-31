@@ -1,6 +1,6 @@
-<div id="qrcode" style="height: 100px;  margin: 0 auto;"></div>
-<div>
+<div id="qrcode" class="qr-code"></div>
+<div class="qr-edit-buttons">
     <button class="btn" ng-click="$ctrl.onSubmit()">Print</button>
     <button class="btn" ng-click="$ctrl.regenerate()">Regenerate</button>
 </div>
-<!--<p ng-if="$ctrl.error"> {{ $ctrl.errorMessage }} </p>-->
+<p ng-if="$ctrl.error"> {{ $ctrl.errorMessage }} </p>
