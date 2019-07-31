@@ -21,9 +21,8 @@
              qrLoginService.getQrPasscodeFromStudentId()
                  .then(function (response) {
                      ctrl.qrCode = response['data'];
-                     //ctrl.hasQrPassword = true;
-                     //displayQrCode();
-                     console.log(ctrl.qrCode);
+                     ctrl.hasQrPassword = true;
+                     displayQrCode();
                  });
             ctrl.hasQrPassword = true;
         };
@@ -40,6 +39,7 @@
             qrLoginService.regenerateNewQrCode()
                 .then(function (response) {
                     ctrl.qrCode = response["data"];
+                    console.log(response);
                     ctrl.qrImage.makeCode(response["data"]);
                 })
                 .catch(function (response) {
