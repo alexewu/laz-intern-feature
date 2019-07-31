@@ -25,7 +25,6 @@
                      displayQrCode();
                  });
             ctrl.hasQrPassword = true;
-            displayQrCode();
         };
 
         function displayQrCode() {

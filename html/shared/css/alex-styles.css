@@ -28,8 +28,16 @@
 
 .card
 {
-    margin:0 auto;
+    margin: 0 auto;
     width: 50%;
     background-color: #d9d9d9;
     -webkit-border-radius: 50px;
+}
+
+.teacher_img_background
+{
+    width: 2029px;
+    height: 1327px;
+    border: 0px;
+    margin: 0 auto;
 }
