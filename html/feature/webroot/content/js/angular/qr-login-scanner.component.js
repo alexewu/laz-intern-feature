@@ -46,13 +46,13 @@
             //    .catch(setInvalidLoginError);
             qrLoginService.getQrPasscodeFromStudentId()
                 .then(function (response) {
-                    //if(response['data'] === qrPasscode) {
-                    //    redirectToStudentPortal();
-                    //}
-                    //else {
-                    //    setInvalidLoginError();
-                    //}
-                    console.log(response);
+                    console.log(response + " " + qrPasscode);
+                    if(response['data'] === qrPasscode) {
+                        redirectToStudentPortal();
+                    }
+                    else {
+                        setInvalidLoginError();
+                    }
                 });
         }
     }
