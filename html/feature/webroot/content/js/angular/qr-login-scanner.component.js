@@ -39,10 +39,7 @@
         }
 
         function doQrLogin(qrPasscode) {
-            ctrl.isLoggingIn = true;
-            return qrLoginService.login(qrPasscode)
-                .then(redirectToStudentPortal)
-                .catch(setInvalidLoginError);
+            console.log("you logged in! and this is your qrpasscode: " + qrPasscode);
         }
     }
 })();
