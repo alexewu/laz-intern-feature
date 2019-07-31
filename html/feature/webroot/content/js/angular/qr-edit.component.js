@@ -39,7 +39,6 @@
             qrLoginService.regenerateNewQrCode()
                 .then(function (response) {
                     ctrl.qrCode = response["data"];
-                    console.log(response);
                     ctrl.qrImage.makeCode(response["data"]);
                 })
                 .catch(function (response) {
