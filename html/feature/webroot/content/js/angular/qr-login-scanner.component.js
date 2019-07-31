@@ -8,9 +8,9 @@
     });
 
     app.controller('qrLoginScannerController', qrLoginScannerController);
-    qrLoginScannerController.$inject = ['qrLoginService', 'qrScanner', '$route'];
+    qrLoginScannerController.$inject = ['qrLoginService', 'qrScanner'];
 
-    function qrLoginScannerController(qrLoginService, qrScanner, $route)
+    function qrLoginScannerController(qrLoginService, qrScanner)
     {
         var ctrl = this;
         qrScanner.subscribe(doQrLogin);
@@ -22,7 +22,6 @@
         ctrl.redirectToTeacherUsernameForm = function ()
         {
             //windowService.redirect('/main/Login');
-            $route.reload();
         };
 
         ctrl.$onDestroy = function ()
