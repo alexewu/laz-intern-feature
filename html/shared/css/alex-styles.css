@@ -1,7 +1,6 @@
 .container
 {
     justify-content: center;
-    padding: 40px;
 }
 
 .content
@@ -28,6 +27,7 @@
 
 .card
 {
+    width: 40%;
     background-color: #d9d9d9;
     -webkit-border-radius: 80px;
 }
