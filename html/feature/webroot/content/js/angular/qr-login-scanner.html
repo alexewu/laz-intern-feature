@@ -17,8 +17,7 @@
     <img ng-if="$ctrl.isSuccessfulLogin" alt="studentPortal" src="/../studentPortal.jpg">
 </div>
 
-<div ng-if="$ctrl.isInvalidQrPassword" class="alert alert-fail" >
-    <span class="icon icon-alert2 icon-login"></span>
+<div ng-if="$ctrl.isInvalidQrPassword" class="alert alert-fail" class="error">
     {{$ctrl.errorMessage}}
 </div>
 <!--<button class="btn" ng-if="$ctrl.isInvalidQrPassword" ng-click="$ctrl.redirectToTeacherUsernameForm()">Go back</button>-->
