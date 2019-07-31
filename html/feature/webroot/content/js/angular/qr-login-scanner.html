@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <h2 ng-if="!$ctrl.isLoggingIn"> Scan the QR code from the <a href="/teacher.html">teacher side</a>!</h2>
+    <h2 ng-if="!$ctrl.isLoggingIn"> Scan the QR code from the <a href="/teacher">teacher side</a>!</h2>
     <p> (Tip: take a picture of the QR code on your phone and scan) </p>
     <h2 ng-if="$ctrl.isLoggingIn && $ctrl.isSuccessfulLogin"> Success! You've logged in :D </h2>
     <qr-scanner ng-if="!$ctrl.isLoggingIn"></qr-scanner>
