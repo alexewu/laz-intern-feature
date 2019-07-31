@@ -34,6 +34,20 @@
     -webkit-border-radius: 50px;
 }
 
+.teacher_side_container
+{
+    position: relative;
+}
+
+.qr-edit
+{
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+}
+
 .teacher_img_background
 {
     width: 2029px;
