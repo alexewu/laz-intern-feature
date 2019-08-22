@@ -22,7 +22,7 @@ class QrDbGateway {
         //     'student_last_name' => 'Wu',
         //     'screen_name' => 'alexewu'
         // ];
-        $this->qrDm = new DataManager(DataManager::DB_RK_ACTIVITY, DataManager::LOC_MASTER, $this->shardId);
+        $this->qrDm = new DataManager();
     }
 
     public function getQrCodeFromStudentId(int $studentId): ?string {

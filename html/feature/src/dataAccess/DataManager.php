@@ -6,50 +6,27 @@ use Exception;
 
 class DataManager
 {
-    const DB_ACCOUNTS = "accounts";
     const DB_RK_ACTIVITY = "rk_activity";
     const LOC_MASTER = "master";
-    private $conn;
+
     private $result;
-    private $lastInsertedId;
-    public function __construct(string $database, string $location, int $shardConfigurationId = null)
+    public function __construct()
     {
-        if (!$this->parametersValid ($database, $location))
-        {
-            throw new Exception ("Invalid parameters for DataManager");
-        }
-        $this->conn = new mysqli ($_ENV["SERVER_NAME"], $_ENV["USERNAME"], $_ENV["PASSWORD"]);
-        if ($this->conn->connect_error)
-        {
-            die ("Connection failed: " . $this->conn->connect_error);
-        }
-        $this->conn->select_db ($database);
+        $this->db = mysqli_connect("localhost", "root", "password123!@#PASSWORD", "rk_activity");
     }
-    public function __destruct()
-    {
-        $this->conn->close ();
+
+    public function query($query) {
+        $this->result = mysqli_query($this->db, $query);
     }
-    public function query (string $sql): void
-    {
-        $this->result = $this->conn->query ($sql);
-        $this->lastInsertedId = $this->conn->insert_id;
+
+    public function fetchAll() {
+        return mysqli_fetch_all ($this->result, MYSQLI_ASSOC);
     }
-    public function fetch (): ?array
-    {
-        if ($this->result)
-            return $this->result->fetch_assoc ();
-        return null;
+
+    public function fetch() {
+        return mysqli_fetch_assoc ($this->result);
     }
-    public function lastId (): int
-    {
-        return $this->lastInsertedId;
-    }
-    private function parametersValid (string $database, string $location)
-    {
-        if ($database !== self::DB_ACCOUNTS && $database !== self::DB_RK_ACTIVITY)
-            return false;
-        if ($location !== self::LOC_MASTER)
-            return false;
-        return true;
-    }
+
+
+
 }
