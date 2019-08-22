@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 namespace feature\src\dataAccess;
+require_once __DIR__ .  '/DataManager.php';
 
+use Exception;
 use feature\src\dataAccess\DataManager;
 
 class QrDbGateway {
