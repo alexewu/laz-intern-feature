@@ -92,5 +92,5 @@ class QrDbGateway {
         $this->qrDm->query($sql);
         return $this->qrDm->fetchAll();
     }
-    
+
 }
