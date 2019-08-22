@@ -1,4 +1,4 @@
-#QR Student Login - Learning A-Z Intern Feature
+# QR Student Login - Learning A-Z Intern Feature
 
 During my internship at Learning A-Z, I was given the task of creating a new method of logging in for students using Raz-Kids. Previously, they only had
 the option of entering a text password or clicking on an icon as a password, but with this feature they can also scan QR codes. QR codes can make 
@@ -7,7 +7,7 @@ logging in easier for kids who don't know how to type, and also make logging in 
 The project here is an isolation of my feature from the LAZ codebase, and only encompasses the main idea of the feature: logging in.
 Much of this code is unused in the demo site, but is used in the actual feature.
 
-###How to use the demo
+### How to use the demo
 In this feature, the teacher side is where the teacher can see and manage the student's QR code and on the student side, there is a 
 webcam where the student can scan that QR code.
 
@@ -22,7 +22,7 @@ invalidating the old QR code.
 5. Hold up the photo of the QR code you just took and this will log you in! If you were to scan an older QR code, you will see that an error message pops up.
 
 
-###Technology Used
+### Technology Used
 This site was built with:
 * Digital Ocean
 * LEMP Stack (Linux, Nginx, MySQL, PHP)
