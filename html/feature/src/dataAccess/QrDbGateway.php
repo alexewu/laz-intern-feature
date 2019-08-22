@@ -12,27 +12,27 @@ class QrDbGateway {
     private $qrDm;
 
     public function __construct(int $shardId) {
-        $this->shardId = $shardId;
-        $this->student = [ //mock student data
-            "student_id" => 12345,
-            'qr_password' => '195d628dbdb59083657dhbthgu73892784nhxjud8394857b2',
-            'student_first_name' => 'Alexandra',
-            'student_last_name' => 'Wu',
-            'screen_name' => 'alexewu'
-        ];
-        //$this->qrDm = new DataManager(DataManager::DB_RK_ACTIVITY, DataManager::LOC_MASTER, $this->shardId);
+        // $this->shardId = $shardId;
+        // $this->student = [ //mock student data
+        //     "student_id" => 12345,
+        //     'qr_password' => '195d628dbdb59083657dhbthgu73892784nhxjud8394857b2',
+        //     'student_first_name' => 'Alexandra',
+        //     'student_last_name' => 'Wu',
+        //     'screen_name' => 'alexewu'
+        // ];
+        $this->qrDm = new DataManager(DataManager::DB_RK_ACTIVITY, DataManager::LOC_MASTER, $this->shardId);
     }
 
     public function getQrCodeFromStudentId(int $studentId): ?string {
-//        $sql = "SELECT qr_password
-//                FROM qr_student_login
-//                WHERE student_id = $studentId";
-//
-//        $this->qrDm->query($sql);
-//        $result = $this->qrDm->fetch();
-//
-//        return $result["qr_password"];
-        return $this->student['qr_password'];
+       $sql = "SELECT qr_password
+               FROM qr_student_login
+               WHERE student_id = $studentId";
+
+       $this->qrDm->query($sql);
+       $result = $this->qrDm->fetch();
+
+       return $result["qr_password"];
+        //return $this->student['qr_password'];
     }
 
     public function isStudentInQrTable(int $studentId): bool {
