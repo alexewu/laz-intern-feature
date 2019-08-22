@@ -2,6 +2,8 @@
 declare(strict_types=1);
 namespace feature\src\dataAccess;
 
+use feature\src\dataAccess\DataManager;
+
 class QrDbGateway {
     const MAX_QR_PASSWORD_LENGTH = 65;
 
